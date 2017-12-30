@@ -12,3 +12,16 @@ export function getCars(keywords){
         payload:request
     }
 }
+
+export function carDetail(id){
+    const request=fetch(`${URL_Root}/carsIndex?id=${id}`,
+    {method:'GET'})
+    .then(response=>response.json())
+
+    console.log(request)
+
+    return{
+        type:'CAR_DETAIL',
+        payload:request
+    }
+}

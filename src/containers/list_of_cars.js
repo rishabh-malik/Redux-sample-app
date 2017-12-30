@@ -7,7 +7,7 @@ class ListOfCars extends Component{
         if(cars){
             return cars.map((car)=>{
                 return (
-                    <Link key={car.id} to={`/cars/${car.id}`} className="car_item">
+                    <Link key={car.id} to={`/car/${car.id}`} className="car_item">
                         <div className="left">
                         <img src={`/images/${car.image}`}/>
                          </div>   
