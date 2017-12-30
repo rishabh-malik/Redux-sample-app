@@ -31,7 +31,7 @@ class Car extends Component{
     render(){
         return(
             <div>
-                {this.renderDetail(this.props.carDetail)}
+                {this.renderDetail(this.props.cars)}
             </div>
         )
     }
@@ -40,7 +40,7 @@ class Car extends Component{
 function mapStateToProps(state){
     console.log(state)
     return{
-        carDetail:state.carDetail
+        cars:state.cars
     }
 }
 
