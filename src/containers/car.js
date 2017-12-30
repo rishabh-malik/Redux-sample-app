@@ -9,9 +9,30 @@ class Car extends Component{
         this.props.carDetail(this.props.match.params.id)
     }
 
+    renderDetail=({detail})=>{
+        if(detail){
+            return detail.map((item)=>{
+                return(
+                    <div key={item.id} className="car_detail">
+                    <img src={`/images/${item.image}`} alt="a"/>
+                    <div>
+                        <h2>{item.model}</h2>
+                        <h4>{item.brand}</h4>
+                        <p>
+                            {item.description}
+                        </p>   
+                    </div>    
+                    </div>   
+                )
+            })
+        }
+    }
+
     render(){
         return(
-            <div>Car</div>
+            <div>
+                {this.renderDetail(this.props.carDetail)}
+            </div>
         )
     }
 }
